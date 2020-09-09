@@ -1,5 +1,9 @@
 apply plugin: 'com.android.library'
 
+//第二步：配置中央仓库插件和您github的账号
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.hanhaiwang'
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
