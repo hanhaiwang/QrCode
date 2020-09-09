@@ -52,8 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // 申请相机权限
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             // 申请权限
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission
-                    .CAMERA)) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)) {
                 Toast.makeText(this, "请至权限中心打开本应用的相机访问权限", Toast.LENGTH_SHORT).show();
             }
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CAMERA}, 0xff88);
@@ -62,8 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // 申请文件读写权限（部分朋友遇到相册选图需要读写权限的情况，这里一并写一下）
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             // 申请权限
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission
-                    .WRITE_EXTERNAL_STORAGE)) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                 Toast.makeText(this, "请至权限中心打开本应用的文件读写权限", Toast.LENGTH_SHORT).show();
             }
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 0xff66);
